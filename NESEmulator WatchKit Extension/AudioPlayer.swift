@@ -30,7 +30,7 @@ class AudioPlayer {
         }
         
         let capacity = AVAudioFrameCount(emulatorCore.audioSampleRate())
-        buffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: capacity)
+        buffer = AVAudioPCMBuffer(pcmFormat: format!, frameCapacity: capacity)
         
         engine.attach(playerNode)
         engine.connect(playerNode, to: engine.mainMixerNode, format: format)
